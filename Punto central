@@ -1,3 +1,35 @@
 ```
+Funcion resultado <- puntocentral (num1,num2)
+	
+	Si num1 > 0 Entonces
+		
+		Si num2 > 0 Entonces
+			
+			Si num1 > num2 Entonces
+				resultado = num2 + ((num1 - num2) / 2);
+			SiNo
+				resultado = num1 + ((num2 - num1) / 2);
+			FinSi
+		SiNo
+			resultado = num1 - ((num1 + Abs(num2))/2);
+		FinSi
+		
+	SiNo
+		Si num2 > 0 Entonces
+			resultado = num1 + ((num2 + Abs(num1))/2)	;
+		SiNo
+			Si Abs(num1) > Abs(num2) Entonces
+				resultado = num1 + ((Abs(num1) - Abs(num2)) / 2);
+			SiNo
+				resultado = num2 + ((Abs(num2) - Abs(num1)) / 2);
+			FinSi
+		FinSi
+	FinSi
+	
+Fin Funcion
 
+Algoritmo Punto_Central
+	Imprimir "El punto central entre (-50,50) es: " puntocentral(-50,50)
+	Imprimir "El punto central entre (40,80) es: " puntocentral(40,80)
+FinAlgoritmo
 ```
